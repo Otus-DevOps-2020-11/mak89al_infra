@@ -3,10 +3,14 @@ mak89al Infra repository
 HW#3. Yandex.Cloud
 # Для подключения к удаленной машине через внешний IP было сделано следующее:
 1. на локальной добавлены строки в  файл /ets/hosts:
-	1.1 178.154.246.47  bastion_VM
-	1.2 10.130.0.15     someinternalhost_VM
+
+	bastion_IP = 35.198.167.169
+	someinternalhost_IP = 10.130.0.15
+
 2. на машине bastion_VM  добавлены строки в  файл /ets/hosts:
 	2.1 10.130.0.15     someinternalhost_VM
+
+
 
 3. подключение к someinternalhost_VM с локальной машине одной командой осуществляется следующим образом:
 	ssh -A -t appuser@BASTION_VM ssh appuser@SOMEINTERNALHOST_VM
@@ -19,3 +23,8 @@ HW#3. Yandex.Cloud
     RequestTTY force
     ForwardAgent yes
     RemoteCommand ssh appuser@SOMEINTERNALHOST_VM
+
+5. Настроен VPN сервер описанный в инструкциию
+Исправлена проблема с необходимостью установить iptables на VM.
+
+Доп. задание по добавлению сертификата к вэб ресурсу не выполнено.
