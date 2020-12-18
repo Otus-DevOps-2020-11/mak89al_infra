@@ -5,6 +5,17 @@ HW#4.Deploy test app
 testapp_IP = 178.154.228.86
 testapp_port = 9292
 
+#deploy of test VM instance
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+  --metadata serial-port-enable=1 \
+  --ssh-key ~/.ssh/appuser.pub
+  --metadata-from-file user-data=./yc_install_scrypt.yaml
+
 HW#3. Yandex.Cloud
 # Для подключения к удаленной машине через внешний IP было сделано следующее:
 1. на локальной добавлены строки в  файл /ets/hosts:
