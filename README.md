@@ -1,5 +1,10 @@
 # mak89al_infra
 mak89al Infra repository
+
+HW#4.Deploy test app
+testapp_IP = 178.154.228.86
+testapp_port = 9292
+
 HW#3. Yandex.Cloud
 # Для подключения к удаленной машине через внешний IP было сделано следующее:
 1. на локальной добавлены строки в  файл /ets/hosts:
