@@ -1,4 +1,5 @@
 #!/bin/bash
-apt update
-apt install -y ruby-full ruby-bundler build-essential
+sudo apt update
+sleep 30
+sudo apt install -y ruby-full ruby-bundler build-essential
 echo "Ruby installed"

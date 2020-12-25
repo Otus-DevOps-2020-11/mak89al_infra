@@ -6,4 +6,4 @@ users:
     groups: sudo
     shell: /bin/bash
 runcmd:
- - curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/mak89al_infra/cloud-testapp/install_ruby.sh | bash && curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/mak89al_infra/cloud-testapp/install_mongodb.sh | bash && curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/mak89al_infra/cloud-testapp/deploy.sh | bash
+ - curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/mak89al_infra/scripts/install_ruby.sh | bash && curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/mak89al_infra/scripts/install_mongodb.sh | bash && curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/mak89al_infra/scripts/deploy.sh | bash
