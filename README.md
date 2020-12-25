@@ -1,6 +1,13 @@
 # mak89al_infra
 mak89al Infra repository
 
+HW#5.Terraform - 1
+testapp_IP = 84.201.159.56:
+testapp_port = 9292
+http://84.201.159.56:9292
+
+
+
 HW#4.Deploy test app
 testapp_IP = 178.154.247.184
 testapp_port = 9292
