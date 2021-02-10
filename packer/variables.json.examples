@@ -1,6 +1,0 @@
- {
-            "source_image_family": "ubuntu-1604-lts",
-            "service_account_key_file": "/Users/alekseymakarov/secrets/key.json",
-            "folder_id": "b1gmcbvsb39pnjf538la",
-            "image_name": "reddit-base-{{timestamp}}"
-  }
