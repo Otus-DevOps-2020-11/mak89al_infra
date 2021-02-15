@@ -1,10 +1,5 @@
 # mak89al_infra
 mak89al Infra repository
-HW Ansible-1
-1.Installed ansible
-2.Installed Python on the hosts APP and DB
-3.Checked how to execute command from instruction
-4.Created first playbook
 
 
 HW#5.Terraform - 1
