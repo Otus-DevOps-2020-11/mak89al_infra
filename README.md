@@ -1,5 +1,11 @@
 # mak89al_infra
 mak89al Infra repository
+HW Ansible-2
+
+Checked several scenarios of work with ansible playbooks.
+
+
+
 HW Ansible-1
 1.Installed ansible
 2.Installed Python on the hosts APP and DB
