@@ -2,7 +2,7 @@
 "builders": [
         {
             "type": "yandex",
-            "service_account_key_file": "/Users/alekseymakarov/secrets/key.json",
+            "service_account_key_file": "/Users/alekseymakarov/mak89al_infra/ansible/terraform/stage/key.json",
             "folder_id": "b1gmcbvsb39pnjf538la",
             "source_image_family": "ubuntu-1604-lts",
             "image_name": "reddit-base-{{timestamp}}",
@@ -15,10 +15,9 @@
     ],
 
 "provisioners": [
-        {
-            "type": "shell",
-            "script": "/Users/alekseymakarov/mak89al_infra/scripts/install_mongodb.sh",
-            "execute_command": "sudo {{.Path}}"
-        }
+      {
+        "type": "ansible",
+        "playbook_file": "ansible/packer_db.yml"
+      }
     ]
 }
