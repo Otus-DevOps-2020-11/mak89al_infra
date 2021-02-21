@@ -1,23 +1,23 @@
 {
-"builders": [
+   "builders": [
         {
             "type": "yandex",
-#            "service_account_key_file": "{{ user `service_account_key_file` }}",
+            "service_account_key_file": "{{ user `service_account_key_file` }}",
             "folder_id": "b1gmcbvsb39pnjf538la",
             "source_image_family": "ubuntu-1604-lts",
-            "image_name": "reddit-base-{{timestamp}}",
-            "image_family": "reddit-base",
+            "image_name": "reddit-app-base-{{timestamp}}",
+            "image_family": "reddit-app-base",
             "ssh_username": "ubuntu",
-            "platform_id": "standard-v1",
-            "use_ipv4_nat": "true"
+            "use_ipv4_nat": "true",
+            "platform_id": "standard-v1"
         }
-
     ],
-
-"provisioners": [
-       {
-             "type": "ansible",
-             "playbook_file": "ansible/packer_app.yml"
-       }
+    "provisioners": [
+        {
+            "type": "ansible",
+            "playbook_file": "ansible/playbooks/packer_app.yml",
+            "extra_arguments": ["--tags","ruby"],
+            "ansible_env_vars": ["ANSIBLE_ROLES_PATH={{ pwd }}/ansible/roles"]
+        }
     ]
-  }
+}
